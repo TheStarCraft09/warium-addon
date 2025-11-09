@@ -76,11 +76,11 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                project.files('run/mods/clockwork')
-                project.files('run/mods/create')
-                project.files('run/mods/vs')
-                project.files('run/mods/warium')
-                project.files('run/mods/wariumvs')
+                project.files('libs/clockwork')
+                project.files('libs/create')
+                project.files('libs/vs')
+                project.files('libs/warium')
+                project.files('libs/wariumvs')
                 "${mod_id}" {
                     source sourceSets.main
                 }
@@ -135,11 +135,11 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly fileTree(dir: 'run/mods', include: ['clockwork.jar'])
-    compileOnly fileTree(dir: 'run/mods', include: ['create.jar'])
-    compileOnly fileTree(dir: 'run/mods', include: ['vs.jar'])
-    compileOnly fileTree(dir: 'run/mods', include: ['warium.jar'])
-    compileOnly fileTree(dir: 'run/mods', include: ['wariumvs.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['clockwork.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['create.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['vs.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['warium.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['wariumvs.jar'])
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
